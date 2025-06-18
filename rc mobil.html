@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mobil Tenaga Surya - Edukasi Perjalanan Robot</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #1f1b2e;
+    color: #e0d8f5;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  a {
+    color: #a78bfa;
+    text-decoration: none;
+  }
+  a:hover, a:focus {
+    text-decoration: underline;
+  }
+
+  /* Container */
+  .container {
+    max-width: 960px;
+    margin: auto;
+    padding: 1rem 1.5rem 3rem;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+    border-bottom: 2px solid #5b42ba;
+  }
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #c4b5fd;
+    margin-bottom: 0.4rem;
+  }
+  header p.subtitle {
+    font-weight: 600;
+    color: #9ca3af;
+  }
+  header .author-list {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #a78bfa;
+    line-height: 1.4;
+  }
+  header .author-list span {
+    display: inline-block;
+    margin: 2px 6px;
+  }
+
+  /* Section common */
+  section {
+    margin-top: 3rem;
+  }
+  section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #bfdbfe;
+    margin-bottom: 1rem;
+    border-left: 5px solid #7c3aed;
+    padding-left: 0.5rem;
+  }
+  section p, section ul {
+    font-size: 1rem;
+    color: #d8d4f3;
+  }
+  section ul {
+    list-style: inside disc;
+    margin: 0.5rem 0 0 0;
+    padding-left: 0;
+  }
+
+  /* Cards for grouped info */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .card {
+    background: rgba(123, 94, 222, 0.18);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(123, 94, 222, 0.45);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-height: 220px;
+  }
+  .card .icon {
+    font-size: 48px;
+    color: #a78bfa;
+    align-self: center;
+  }
+  .card h3 {
+    color: #e3e0fa;
+    font-weight: 700;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .card ul {
+    list-style: inside circle;
+    font-size: 0.9rem;
+    color: #c4b5fd;
+    margin-top: 0.25rem;
+    flex-grow: 1;
+  }
+  .card ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  /* Usage steps styled list */
+  .steps {
+    list-style: none;
+    counter-reset: step-counter;
+    padding-left: 0;
+  }
+  .steps li {
+    counter-increment: step-counter;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .steps li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #7c3aed;
+    color: white;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px #7c3aedaa;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    background: #312f48;
+    color: #a3adeb;
+    font-size: 0.85rem;
+    border-top: 2px solid #7c3aed;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    section h2 {
+      font-size: 1.5rem;
+    }
+    .card-grid {
+      grid-template-columns: 1fr;
+    }
+    .card {
+      min-height: auto;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Mobil Tenaga Surya</h1>
+  <p class="subtitle">Edukasi Perjalanan Robot - Kelompok 2</p>
+  <p class="author-list" aria-label="Daftar anggota kelompok">
+    <span>Arul Ardiyansah Gadiza Mumpuni P</span>,
+    <span>Ade Wiyadinata</span>,
+    <span>Andi Dwi Setiawan</span>,
+    <span>Amel Noviani</span>,
+    <span>Dea Firnanda</span>,
+    <span>Flora Desica Sari</span>,
+    <span>Mahda Lena Agustina</span>,
+    <span>Rufiyanti Vidia</span>,
+    <span>Sherly Grasela Silvia</span>,
+    <span>Saemah Listiani</span>
+  </p>
+</header>
+
+<main class="container" role="main">
+  <section aria-labelledby="fungsi-title">
+    <h2 id="fungsi-title">Fungsi Mobil Tenaga Surya</h2>
+    <div class="card-grid">
+      <article class="card" role="article" tabindex="0">
+        <span class="material-icons icon" aria-hidden="true" title="Energi Terbarukan">battery_charging_full</span>
+        <h3>Energi Terbarukan</h3>
+        <ul>
+          <li>Memanfaatkan panel surya sebagai sumber listrik ramah lingkungan dan hemat energi.</li>
+        </ul>
+      </article>
+      <article class="card" role="article" tabindex="0">
+        <span class="material-icons icon" aria-hidden="true" title="Kendali Jarak Jauh">settings_remote</span>
+        <h3>Kendali Jarak Jauh (RC)</h3>
+        <ul>
+          <li>Dapat dikendalikan dari jarak jauh menggunakan modul Bluetooth atau RF.</li>
+        </ul>
+      </article>
+      <article class="card" role="article" tabindex="0">
+        <span class="material-icons icon" aria-hidden="true" title="Kontrol Otomatis">memory</span>
+        <h3>Kontrol Otomatis oleh Arduino</h3>
+        <ul>
+          <li>Arduino mengatur sistem motor, pengisian daya, arah, dan kecepatan mobil.</li>
+        </ul>
+      </article>
+      <article class="card" role="article" tabindex="0">
+        <span class="material-icons icon" aria-hidden="true" title="Sarana Edukasi">school</span>
+        <h3>Sarana Edukasi</h3>
+        <ul>
+          <li>Cocok untuk belajar mikrokontroler, energi surya, sistem kendali, dan teknologi ramah lingkungan.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="panduan-title">
+    <h2 id="panduan-title">Cara Penggunaan</h2>
+    <ol class="steps" aria-label="Langkah-langkah penggunaan mobil tenaga surya">
+      <li>Isi daya dari panel surya dengan menempatkan mobil di bawah sinar matahari agar baterai terisi otomatis.</li>
+      <li>Nyalakan sistem dengan menghidupkan sakelar utama untuk mengaktifkan Arduino dan motor.</li>
+      <li>Hubungkan remote/Bluetooth, sambungkan HP ke modul Bluetooth (contoh "HC-05") atau nyalakan remote RF.</li>
+      <li>Kendalikan mobil menggunakan aplikasi atau remote sesuai arah yang diinginkan.</li>
+      <li>Matikan setelah digunakan, kemudian simpan di tempat teduh agar komponen tetap awet.</li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Kelompok 2 </p>
+</footer>
+</body>
+</html>
+
